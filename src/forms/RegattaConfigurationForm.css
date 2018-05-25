@@ -1,0 +1,27 @@
+.form-row {
+	padding-bottom: 2px;
+}
+.form-section-last-row {
+	padding-bottom: 5px;
+}
+
+.single-select-input {
+	width:25%;
+}
+
+.form-container {
+	padding-left: 20px;
+}
+
+.testing {
+		  display: inline-block !important;
+		  position: relative !important;
+}
+
+.testPass {
+	color: green;
+}
+
+.testFail {
+	color: red;
+}

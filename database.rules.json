@@ -1,0 +1,31 @@
+{
+	"rules": {
+		".read": false,
+		".write": false,
+		"results": {
+			".read": true,
+      "$uid": {
+        ".write": "auth!=null && root.child('users').hasChild(auth.uid) &&  (root.child('regatta').child($uid).child('settings/config/Owner').val() === auth.email ||  root.child('regatta').child($uid).child('settings/config/uid').val() === auth.uid || root.child('admins').hasChild(auth.uid))"
+      }   
+		},
+		"summary": {
+		  ".read": true,
+      "$uid": {
+        ".write": "auth!=null && root.child('users').hasChild(auth.uid) && (root.child('regatta').child($uid).child('settings/config/Owner').val() === auth.email || root.child('regatta').child($uid).child('settings/config/uid').val() === auth.uid || root.child('admins').hasChild(auth.uid))"
+      }
+		},
+		"regatta": {
+			".read": "auth != null && root.child('users').hasChild(auth.uid)",
+			//".write": "auth != null && root.child('users').hasChild(auth.uid)"
+      "$uid": {
+        ".write": "auth!=null && root.child('users').hasChild(auth.uid) && (root.child('regatta').child($uid).child('settings/config/Owner').val() === auth.email || root.child('regatta').child($uid).child('settings/config/uid').val() === auth.uid || root.child('admins').hasChild(auth.uid))"
+      }
+		},
+		"users": {
+			"$uid": {
+				".read": "$uid === auth.uid",
+				".write": "$uid === auth.uid"
+			}
+		}
+	}
+}

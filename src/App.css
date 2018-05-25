@@ -1,0 +1,105 @@
+body {
+  font-size: 14px;
+}
+html {
+  font-size: 100%;
+}
+@media (min-width: 60em) {
+  html {
+    font-size: 90%;
+  }
+}
+
+.App {
+  text-align: left;
+}
+
+.AppBar {
+  text-align: left;
+  background: green;
+}
+@media print {
+  .noprint {
+    display: none !important;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi),
+  (max-width: 1024px) {
+  .narrow {
+    background: green;
+    width: 0px !important;
+    padding: 0px !important;
+    /*display: none !important;*/
+  }
+  .InfoText {
+    display: none !important;
+  }
+}
+
+.xnarrow {
+  background: green;
+  width: 0px !important;
+  padding: 0px !important;
+  /*display: none !important;*/
+}
+
+.RegattaListRow {
+  font-size: 1em !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+.RegattaListHeaderRow {
+  font-size: 1em !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  font-weight: bold !important;
+}
+
+.RegattaRow {
+  height: 30px !important;
+  font-size: 1em !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+.RegattaHeaderRow {
+  color: black !important;
+  height: 30px !important;
+  font-size: 16px !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+.EventResults {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hide {
+  display: tnone;
+}

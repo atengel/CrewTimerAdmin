@@ -1,0 +1,15 @@
+{
+    // See https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#debugging-in-the-editor
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Chrome",
+    "type": "chrome",
+    "request": "launch",
+    "url": "http://127.0.0.1:3000",
+    "webRoot": "${workspaceRoot}/src",
+    "userDataDir": "${workspaceRoot}/.vscode/chrome",
+    "sourceMapPathOverrides": {
+      "webpack:///src/*": "${webRoot}/*"
+    }
+  }]
+}
